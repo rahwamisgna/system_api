@@ -1,0 +1,26 @@
+#%RAML 1.0 Library
+usage: collect all the data-types
+types:
+  datatype:
+   type: object
+   properties:
+          name:
+            type: string
+            required: false
+          id:
+            type: integer
+            required: true
+  responses:
+   type: object
+   properties:
+              status:
+                type: string
+                required: true
+              message:
+                type: string
+                required: true
+              code:
+                type: integer
+                required: true
+
+       

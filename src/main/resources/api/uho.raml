@@ -1,0 +1,56 @@
+#%RAML 1.0
+title: UHO
+baseUri: https://localhost:8081/v1/api
+securitySchemes:
+  oauth_2_0: !include SecuritySchema/securityScheme.raml
+traits:
+  x-correlation-id: !include traits/trait.raml
+  x-transaction-id: !include traits/transcationidTrait.raml
+   
+uses:
+  datatype: /data-type-library.raml/library.raml
+  common: exchange_modules/f239c2ed-692f-4c6c-b108-701e34a0f404/datatype-common/1.0.0/datatype-common.raml
+/permissions:
+  securedBy: [oauth_2_0]
+  post:
+    description: This resource provides all permissions  
+    is: [x-correlation-id,x-transaction-id]           
+    body:
+      application/json:
+        type: datatype.datatype
+        example:
+          {
+            "name": "silvana",
+            "id": 123
+          }
+
+    responses:
+      200:
+        body:
+          application/json:
+            type: common.datatype
+            example:
+              {
+                "code": 200,
+                "status": "Success",
+                "message": "This is the message from response"
+              }
+      500:
+        body:
+          application/json:
+            type: common.datatype
+            example:
+              {
+                "code": 500,
+                "status": "Internal server error",
+                "message": "This is the message from response"
+              }
+           
+                  
+
+                  
+
+
+                  
+              
+        

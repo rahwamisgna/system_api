@@ -1,0 +1,8 @@
+http:
+   port:"8081"
+   
+db:
+   username:"sibu"
+   password:"![8vhjgN6jLKAqpcwo5F0+kQ==]"
+   port:"1521"
+   

@@ -1,0 +1,37 @@
+{
+  "configs": [
+    "global-element.xml",
+    "uho.xml",
+    "global-error-handler.xml"
+  ],
+  "secureProperties": [],
+  "redeploymentEnabled": true,
+  "name": "com.mycompany:sapi_uhub:1.0.0-SNAPSHOT",
+  "minMuleVersion": "4.3.0",
+  "requiredProduct": "MULE_EE",
+  "classLoaderModelLoaderDescriptor": {
+    "id": "mule",
+    "attributes": {
+      "exportedPackages": [],
+      "exportedResources": [
+        "api/data-type-library.raml/library.raml",
+        "api/datatype.raml/dataType123.raml",
+        "api/datatype.raml/responses.raml",
+        "api/exchange_modules/f239c2ed-692f-4c6c-b108-701e34a0f404/datatype-common/1.0.0/datatype-common.raml",
+        "api/SecuritySchema/securityScheme.raml",
+        "api/traits/trait.raml",
+        "api/traits/transcationidTrait.raml",
+        "api/uho.raml",
+        "dev.yaml",
+        "global-element.xml",
+        "global-error-handler.xml",
+        "log4j2.xml",
+        "uho.xml"
+      ]
+    }
+  },
+  "bundleDescriptorLoader": {
+    "id": "mule",
+    "attributes": {}
+  }
+}
